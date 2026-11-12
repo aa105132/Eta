@@ -416,7 +416,7 @@ internal fun safeLinkUrl(url: String): String? {
     return trimmed.takeIf { scheme in SAFE_LINK_SCHEMES }
 }
 
-private val SAFE_LINK_SCHEMES = setOf("http", "https", "mailto")
+private val SAFE_LINK_SCHEMES = setOf("http", "https", "mailto", "file", "content")
 
 /**
  * 处理 CommonMark 反斜杠转义与 HTML 实体。解析器把它们保留在 TEXT 叶子里，
